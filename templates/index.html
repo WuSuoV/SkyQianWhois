@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/static/main.min.css">
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+    <title>Whois查询 - {{ url }}</title>
+    <meta name="Keywords" content="Whois查询,支持1700+域名后缀,主流whois查询,非主流whois查询,国别whois查询,新顶级whois查询,站长工具,whois工具,域名工具,域名查询,域名注册信息">
+    <meta name="description" content="追求极致的whois查询。支持1700+后缀，同时支持价格、备案和IANA查询，提炼有效数据，时区自动转换，国别城市自动转中文，域名重要状态提示">
+</head>
+<body>
+<div class="search">
+    <form class="search_box" onsubmit="return Submit()">
+        <div class="head">
+            <label><a class="home_label" onclick="Home()">域名Whois查询</a></label><br>
+            <button id="reward_btn" type="button" onclick="RewardShow()">打赏</button>
+            <div id="cost" onclick="RewardShow()">&nbsp;</div>
+        </div>
+        <span class="input_btn">
+            <input id="search_input" name="search_input" oninput="inputChange(this)" autocomplete="off" required="">
+            <button type="button" class="delete" id="input_clear" style="visibility: hidden"></button>
+            <button type="submit" id="search_button">查询</button>
+        </span>
+        <div id="price_load"></div>
+        <div id="price_box">
+            <div id="premium">溢价:<span id="premium_val"></span></div>
+            <div id="register">
+                <a id="registrar-a" target="_blank"><i></i></a>
+                <div id="register-text">注册:¥<span id="register_val"></span></div>
+                <div id="register-tip"></div>
+            </div>
+            <div id="renew">
+                <a id="renew-a" target="_blank"><i></i></a>
+                <div id="renew-text">续费:¥<span id="renew_val"></span></div>
+                <div id="renew-tip"></div>
+            </div>
+            <div id="status">状态:<span id="status_val"></span></div>
+        </div>
+    </form>
+    <div id="result">
+        <table id="icp">
+        </table>
+        <table id="main">
+        </table>
+        <pre id="text"></pre>
+        <!-- 加载动画 start-->
+        <div id="loader" class="global-loader-scope">
+            <span class="gb-loader gb-loader--lg"></span>
+        </div>
+        <!-- 加载动画 end-->
+        <div id="brand">
+            {{ url }}
+        </div>
+    </div>
+</div>
+<!-- 打赏弹出框 start-->
+<div class="modal" id="reward_modal">
+    <div class="container">
+        <img id="wx-img" img-url="https://static.wusuov.com/webp/commonuse/vxpay.webp" alt="">
+        <img id="zfb-img" img-url="https://static.wusuov.com/webp/commonuse/alipay.webp" alt="">
+        <div class="close delete" onclick="RewardHidden()"></div>
+    </div>
+    <div class="reward_text">
+        <p>感谢您对 {{ url }} 的支持!</p>
+        <p>了解更多: www.yiove.com</p>
+    </div>
+</div>
+<!-- 打赏弹出框 end-->
+</body>
+<script type="text/javascript" src="/static/main.min.js"></script>
+<script charset="UTF-8" id="LA_COLLECT" src="https://fx.2ge.org/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"KCuJOT5ZOej7qyuG",ck:"KCuJOT5ZOej7qyuG"})</script>
+
+</html>
