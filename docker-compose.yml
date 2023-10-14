@@ -1,8 +1,9 @@
+version: "3"
 services:
-  SkyQianWhois:
+  skyqianwhois:
     build: .
-    image: hSkyQianWhois
-    container_name: SkyQianWhois
+    image: skyqianwhois
+    container_name: skyqianwhois
     environment:
       - TZ=Asia/Shanghai
     restart: always
