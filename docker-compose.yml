@@ -1,0 +1,11 @@
+services:
+  SkyQianWhois:
+    build: .
+    image: hSkyQianWhois
+    container_name: SkyQianWhois
+    environment:
+      - TZ=Asia/Shanghai
+    restart: always
+    network_mode: "bridge"
+    ports:
+      - "5000:5000"
