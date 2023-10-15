@@ -20,8 +20,8 @@ def app_domain(domain):
 def app_whois():
     domain = request.values.get('domain')
 
-    # 直接跳过缓存
-    return Whois(domain).whois()
+    # 如果需要跳过缓存，可取消下一行的注释
+    # return Whois(domain).whois()
 
     # 缓存键
     key = f'{domain}-whois'
