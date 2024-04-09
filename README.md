@@ -10,9 +10,9 @@
 
 演示站点：[https://whois.yiove.com/](https://whois.yiove.com/)
 
-| ![image-20231014095414120](https://static.wusuov.com/image/2023/10/e5c34bbd821e8ba29d35857d3a7b032f.png) | ![image-20231014095450074](https://static.wusuov.com/image/2023/10/cc4bd5394e59c11664cd5f083635aa38.png) |
+| ![image-20231014095414120](https://static.2ge.org/image/2023/10/e5c34bbd821e8ba29d35857d3a7b032f.png) | ![image-20231014095450074](https://static.2ge.org/image/2023/10/cc4bd5394e59c11664cd5f083635aa38.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![image-20231014095509932](https://static.wusuov.com/image/2023/10/7a6dac65b22c83803d084989e721abce.png) | ![image-20231014095523635](https://static.wusuov.com/image/2023/10/6732e4fb259ded6ea51e25a945a0e120.png) |
+| ![image-20231014095509932](https://static.2ge.org/image/2023/10/7a6dac65b22c83803d084989e721abce.png) | ![image-20231014095523635](https://static.2ge.org/image/2023/10/6732e4fb259ded6ea51e25a945a0e120.png) |
 
 ## 如何安装
 
@@ -68,7 +68,7 @@ server {
 
 ```nginx
 location / {
-    proxy_pass http://127.0.0.1:10005;
+    proxy_pass http://127.0.0.1:5000;
     proxy_set_header Host 127.0.0.1:$server_port;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
